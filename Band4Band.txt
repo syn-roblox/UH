@@ -7,9 +7,9 @@ local colors = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Syn | Untitled Hood | Version: 2.0", colors)
+local Window = Library.CreateLib("SynWare | Untitled Hood | Version: 2.0", colors)
 local Tab = Window:NewTab("Cash")
-local Section = Tab:NewSection("Syn | Cash Options")
+local Section = Tab:NewSection("SynWare | Cash Options")
 
 
 
