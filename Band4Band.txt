@@ -1,7 +1,17 @@
-﻿local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Syn | Untitled Hood Cash, "Sentinel")
+local colors = {
+    SchemeColor = Color3.fromRGB(47,49,54,255),
+    Background = Color3.fromRGB(54,57,63,255),
+    Header = Color3.fromRGB(32,34,37,255),
+    TextColor = Color3.fromRGB(255, 255, 255, 0),
+    ElementColor = Color3.fromRGB(47,49,54,255)
+}
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Syn | Untitled Hood | Version: 2.0", colors)
 local Tab = Window:NewTab("Cash")
-local Section = Tab:NewSection("Syn | Cash Section")
+local Section = Tab:NewSection("Syn | Cash Options")
+
+
 
 
 
@@ -10,6 +20,9 @@ local Workspace = game:GetService("Workspace")
 local Players = game.Players.LocalPlayer
 
 local Character = Players.Character
+
+
+
 
 function Buy(Object)
     local Object = Object
@@ -21,6 +34,9 @@ function Buy(Object)
 end
 
 Buy("[Revolver] - $1300")
+
+wait(0.5)
+
 
 wait(0.5)
 
@@ -39,34 +55,23 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 
 wait(2)
 
-local nigger = game:GetService('Players').LocalPlayer
-        local Nigger2 = nigger.Character
-        Nigger2:FindFirstChildOfClass('Humanoid'):Destroy()
-        local shitCharacter = nigger.CharacterAdded:Wait()
-        local spoofFolder = Instance.new('Folder')
-        spoofFolder.Name = 'FULLY_LOADED_CHAR'
-        spoofFolder.Parent = shitCharacter
-        shitCharacter:WaitForChild('BodyEffects').Dead:Destroy()
-        shitCharacter:WaitForChild('BodyEffects').BreakingParts:Destroy()
-        local spoofValue = Instance.new('BoolValue', shitCharacter.BodyEffects)
-        spoofValue.Name = 'Dead'
-        wait(1)
-        nigger.Character:WaitForChild('Humanoid'):WaitForChild('BodyWidthScale').Value = 0.5
 
 
-_G.Aiden = "hiaho76"
+_G.Aiden = MadeBySyn
 
-_G.Amount = 999999999999
+_G.Amount = 999999999999 
+
+_G.Amount2 = 7777777777
 ---
 
-_G.Reset = -420
+_G.Reset = 1 
 
-Section:NewButton("Give Selected Player Cash", "Give Player Cash", function()
+Section:NewButton("Give Player Cash", "Give Selected Player Cash", function()
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     "Reload",
     {
-        Name = "[Revolver]",
+         Name = "[Revolver]",
         Parent = Game.Players.LocalPlayer.Backpack,
         ClassName = "Tool",
         Ammo = game:GetService("Players")[_G.Aiden].DataFolder.Currency,
@@ -77,8 +82,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 ) 
 end)
 
-
-Section:NewButton("Reset Selected Player Cash", "Reset Player Cash", function()
+Section:NewButton("Reset Player Cash", "Reset Selected Players Cash", function()
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
     "Reload",
@@ -94,6 +98,18 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 ) 
 end)
 
-Section:NewTextBox("Username:", "Player Who You Decide To Interfere With", function(value)
+
+--game:GetService("Players").BadSnif
+
+
+
+
+
+
+Section:NewTextBox("Username", "Player That Actions Are Going Towards", function(value)
     _G.Aiden = value
+    NewTextBox.func = Color3.fromRGB(111,111,111,111)
 end)
+
+
+
